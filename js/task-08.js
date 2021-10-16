@@ -3,7 +3,6 @@ const form = document.querySelector('.login-form');
 form.addEventListener('submit', onFormSubmit);
 
 
-
 function onFormSubmit(event){
 event.preventDefault();
 const formElements = event.currentTarget.elements;
@@ -21,18 +20,14 @@ if(email === `` || password === ``){
 }
 console.log(formDate);
 
-formFinish();
+form.reset();
 }
 
 function alertText (){
     window.alert(`Всі поля повинні бути заповнені`);
 };
 
-function formFinish(){
-    document.getElementById(form).requestFullscreen();
-}
 
 
 
-// window.alert(`Всі поля повинні бути заповнені`)
-// const formData = new FormData(event.currentTarget);
+
