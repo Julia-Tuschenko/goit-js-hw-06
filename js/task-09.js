@@ -16,7 +16,7 @@ btnChangeColor.addEventListener('click', onColorImprovisation);
 
 function onColorImprovisation(color){
   colorBody.style.backgroundColor = getRandomHexColor(color);
-  color = getRandomHexColor();
+  color = getRandomHexColor(color);
   spanText.textContent = color;
 
 }

@@ -19,8 +19,9 @@ function onCreateBoxes(){
 }
 
 const createBoxes = (amount) => {
-  const createBoxes = document.createElement("div");
-  createBoxes.add(amount);
+  `<div class="div">
+  ${amount}/>
+  </div>`
 }
 
 console.log(createBoxes);
