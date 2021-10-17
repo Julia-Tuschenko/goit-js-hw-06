@@ -12,11 +12,26 @@ console.log(colorBody);
 
 btnChangeColor.addEventListener('click', onColorImprovisation);
 
-function onColorImprovisation(event){
-  colorBody.style.backgroundColor = getRandomHexColor(event);
-  spanText.textContent = colorBody.style.backgroundColor;
+
+
+function onColorImprovisation(color){
+  colorBody.style.backgroundColor = getRandomHexColor(color);
+  color = getRandomHexColor();
+  spanText.textContent = color;
 
 }
 
 console.log(btnChangeColor);
+
+
+
+
+
+// function onColorImprovisation(event){
+//   colorBody.style.backgroundColor = getRandomHexColor(event);
+//   spanText.textContent = colorBody.style.backgroundColor;
+
+// }
+
+// console.log(btnChangeColor);
 

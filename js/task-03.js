@@ -13,22 +13,64 @@ const images = [
   },
 ];
 
+
 const galleryList = document.querySelector(".gallery");
 
-const imagesRef  = images.map(element =>{
-  const imagesList = document.createElement("li");
-  const imagesRef  = document.createElement("img");
-  imagesList.classList.add('gallety-item');
-  imagesList.appendChild(imagesRef);
-  imagesRef.classList.add('gallety-img');
-  imagesRef.src = element.url;
-  imagesRef.alt = element.alt;
-  return imagesList;
-})
+const imagesRef  = images
+.map(element => 
+  `<li class="gallety-item"><img class="gallety-img" src="${element.url}"
+  alt="${element.alt}"/>
+  </li>`
+)
+.join("");
 
-galleryList.append(...imagesRef);
 
+galleryList.insertAdjacentHTML("afterbegin", imagesRef);
 console.log(galleryList);
+
+
+  // const imagesList = document.createElement(`li`);
+  // const imagesRef  = document.createElement(`img`);
+  // imagesList.classList.add('gallety-item');
+  // imagesList.appendChild(imagesRef);
+  // imagesRef.classList.add('gallety-img');
+  // imagesRef.src = element.url;
+  // imagesRef.alt = element.alt;
+  // return imagesList;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const galleryList = document.querySelector(".gallery");
+
+// const imagesRef  = images.map(element =>{
+//   const imagesList = document.createElement(`li`);
+//   const imagesRef  = document.createElement(`img`);
+//   imagesList.classList.add('gallety-item');
+//   imagesList.appendChild(imagesRef);
+//   imagesRef.classList.add('gallety-img');
+//   imagesRef.src = element.url;
+//   imagesRef.alt = element.alt;
+//   return imagesList;
+// })
+
+// galleryList.append(...imagesRef);
+
+// console.log(galleryList);
 
 
 
