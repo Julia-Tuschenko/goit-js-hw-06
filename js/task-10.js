@@ -1,6 +1,8 @@
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
+const amount = 0;
+
 
 const refs = {
   controlsEl: document.querySelector('#controls'),
@@ -12,16 +14,22 @@ const refs = {
 // console.log(refs);
 //  const mySet = new Set();
 
-refs.btnCreate.addEventListener('click', onCreateBoxes);
+refs.btnCreate.addEventListener('click', onDivAmount);
 
-function onCreateBoxes(){
-  createBoxes();
+function onDivAmount(){
+  const createBoxes = `<div class="div"></div>`;
+  onAmountCreatBoxes();
+  return createBoxes * onAmountCreatBoxes;
 }
 
-const createBoxes = (amount) => {
-  `<div class="div">
-  ${amount}/>
-  </div>`
+function onAmountCreatBoxes (event){
+  if(event){
+    amount = event;
+  };
 }
 
-console.log(createBoxes);
+
+
+
+
+console.log(onDivAmount);
