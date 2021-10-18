@@ -14,6 +14,8 @@ const images = [
 ];
 
 
+
+
 const galleryList = document.querySelector(".gallery");
 
 const imagesRef  = images
